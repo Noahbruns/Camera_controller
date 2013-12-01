@@ -3,6 +3,7 @@
 <head>
     <title>Camera control</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script type="text/javascript" src="jquery.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="camera.js"></script>
@@ -28,7 +29,7 @@
 
     #img {
       width: 100%;
-      max-width: 430px;
+      max-width: 450px;
     }
 
     body {
@@ -87,7 +88,7 @@
 </div>
 </div>
 <div class="col-md-4 col-md-offset-2" id="image_con">
-    <img id="img" src="http://192.168.1.100/imagep/picture.jpg" />
+    <img id="img" src="http://192.168.1.100/imagep/picture.jpg"  class="img-responsive"/>
 </div>
 </div>
 

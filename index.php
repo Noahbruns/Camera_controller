@@ -1,26 +1,27 @@
+<?php header('Access-Control-Allow-Origin: http://10.0.0.2:5000'); ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Camera control</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width">
     <script type="text/javascript" src="jquery.js"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="camera.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <style type="text/css">
     #ctrl {
-      width:128px;
+      width:148px;
     }
 
     #zoom_in {
-      margin-left: 6px;
-      margin-top: 4px;
+      margin-left: 11px;
+      margin-top: 8px;
     }
 
     #zoom_out {
-      margin-left: 6px;
-      margin-top: 6px;
+      margin-left: 10px;
+      margin-top: 10px;
     }
 
     #image_con {
@@ -54,13 +55,7 @@
 
 <div class="container">
 
-<div class="row">
-  <div class="col-md-4">
-    <H2>Cameracontrol</H2><br> 
-  </div>
-</div>
-
-<div class="row">
+<div class="row" style="margin-top: 10px;">
   <div class="col-md-2">
     <div id="ctrl">
 <div class="row">
@@ -79,8 +74,13 @@
 
 <div class="row" style="margin-top:10px;">
   <div class="col-xs-6 col-xs-offset-4 btn-group-vertical">
-      <button type="button" class="btn btn-default btn-sm tip" title="Bild aktualisieren" data-toggle="tooltip" data-placement="right" onclick="reload()"><span class="glyphicon glyphicon-repeat"></button>
-      <button type="button" class="btn btn-default btn-sm tip" title="Einstellungen" data-toggle="tooltip" data-placement="right" onclick="show_modal()"><span class="glyphicon glyphicon-cog"></button>
+      <button type="button" class="btn btn-default btn tip" title="Bild aktualisieren" data-toggle="tooltip" data-placement="right" onclick="reload()"><span class="glyphicon glyphicon-repeat"></button>
+      <button type="button" class="btn btn-default btn tip" title="Einstellungen" data-toggle="tooltip" data-placement="right" onclick="show_modal()"><span class="glyphicon glyphicon-cog"></button>
+      <button type="button" class="btn btn-danger btn dropdown-toggle" id="TV_button" data-toggle="dropdown">TV <span class="caret"></span></button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#"><span id="Status_text">STATUS: warten</span></a></li>
+    <li><button style="margin-left:20px;" type="button" class="btn btn-primary" onclick="TV_switch()"><span id="Status_btn">Warten...</span></button></li>
+  </ul>
   </div>
 
 </div>
